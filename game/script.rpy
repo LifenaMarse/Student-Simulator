@@ -54,12 +54,18 @@ label start:
             "Сегодня выходной, возможно стоит отдохнуть?"
         else:
             $ workday = True
-            "Сегодня будний, пора за работу!"
-        
+            "Сегодня будний, пора за работу!"   
+
+        if renpy.random.randint(1, 10) <= 5:
+            $ random_event = True
+        else:
+            $ random_event = False
         
         if calendar[calendar_counter][4]:
             "Вроде говорили, что сегодня на парах должно быть что-то важное. {w}Стоит сходить в универ!"
             $ mini_games_counter += 1
+
+
 
         menu:       
             "Планы на сегодня"         
@@ -83,6 +89,8 @@ label start:
         $ calendar_counter += 1
         "Что подарит новый день?"
         
+
+
 
     if max(studies, finance, mental_health, physical_health) >= 80:
         $ max_parameter = max(studies, finance, mental_health, physical_health)

@@ -72,7 +72,16 @@ define weather = "хорошая"
 # персонаж преподаватель
 define p = Character('Препод', color="#658a65")
 
+# правильность ответа в мини играх
 define correct_answer = False
+
+# срабатывание с.с.
+define random_event = False
+
+
+# выбор с.с.
+define which_random_event = 0
+
 
 
 

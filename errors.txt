@@ -2,11 +2,21 @@
 errors listed below, and try again.
 
 
-File "game/mini games.rpy", line 358: expected statement.
-(Perhaps you left out a ' at the end of the first line.)
-    p '''
-        
-        '''
+File "game/random events.rpy", line 12: reached end of line when expecting ':'.
+    if studies <= 20
+                    ^
+
+File "game/random events.rpy", line 14: expected statement.
+    else:
+        ^
+
+File "game/random events.rpy", line 37: reached end of line when expecting ':'.
+    if studies <= 20
+                    ^
+
+File "game/random events.rpy", line 39: expected statement.
+    else:
+        ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Fri May 12 21:33:14 2023
+Tue May 16 21:52:57 2023
