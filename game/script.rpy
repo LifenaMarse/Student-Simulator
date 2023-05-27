@@ -35,6 +35,15 @@ label start:
     scene mesi
     with fade # плавный переход
 
+    menu:       
+        "Выбор факультета"         
+        "IT":
+            $ faculty_IT = True
+        "Химбио":
+            $ faculty_medicine = True
+        "Гуманитарий":
+            $ faculty_humanitarian = True
+
 
     while calendar_counter <= 122:
         $ week_day = calendar[calendar_counter][0]

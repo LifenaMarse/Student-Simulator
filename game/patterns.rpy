@@ -12,7 +12,13 @@ label get_studies:
 
         "Пойти в универ" if workday:
             if calendar[calendar_counter][4]:
-                call mini_games
+                if faculty_IT:
+                    call mini_games_IT
+                elif faculty_medicine:
+                    call mini_games_medicine
+                else:
+                    call mini_games_humanitarian
+
             elif random_event:
                 call go_university
             else:

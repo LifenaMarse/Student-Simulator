@@ -2,21 +2,59 @@
 errors listed below, and try again.
 
 
-File "game/random events.rpy", line 12: reached end of line when expecting ':'.
-    if studies <= 20
-                    ^
+File "game/mini games medicine.rpy", line 53: expected statement.
+(Perhaps you left out a ' at the end of the first line.)
+    p '''
+    
+        '''
 
-File "game/random events.rpy", line 14: expected statement.
-    else:
-        ^
+File "game/mini games medicine.rpy", line 82: expected statement.
+(Perhaps you left out a ' at the end of the first line.)
+    p '''
+    
+        '''
 
-File "game/random events.rpy", line 37: reached end of line when expecting ':'.
-    if studies <= 20
-                    ^
+File "game/mini games medicine.rpy", line 111: expected statement.
+(Perhaps you left out a ' at the end of the first line.)
+    p '''
+    
+        '''
 
-File "game/random events.rpy", line 39: expected statement.
-    else:
-        ^
+File "game/mini games medicine.rpy", line 140: expected statement.
+(Perhaps you left out a ' at the end of the first line.)
+    p '''
+    
+        '''
+
+File "game/mini games medicine.rpy", line 169: expected statement.
+(Perhaps you left out a ' at the end of the first line.)
+    p '''
+    
+        '''
+
+File "game/mini games medicine.rpy", line 198: expected statement.
+(Perhaps you left out a ' at the end of the first line.)
+    p '''
+    
+        '''
+
+File "game/mini games medicine.rpy", line 227: expected statement.
+(Perhaps you left out a ' at the end of the first line.)
+    p '''
+    
+        '''
+
+File "game/mini games medicine.rpy", line 256: expected statement.
+(Perhaps you left out a ' at the end of the first line.)
+    p '''
+    
+        '''
+
+File "game/mini games medicine.rpy", line 285: expected statement.
+(Perhaps you left out a ' at the end of the first line.)
+    p '''
+    
+        '''
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Tue May 16 21:52:57 2023
+Thu May 25 18:40:01 2023

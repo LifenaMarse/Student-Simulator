@@ -1,34 +1,42 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 76, in script call
-    call get_finance
-  File "game/patterns.rpy", line 49, in script call
-    call bar_work
-  File "game/script.rpy", line 76, in script call
-    call get_finance
-  File "game/patterns.rpy", line 49, in script call
-    call bar_work
-ScriptError: could not find label 'bar_work'.
+  File "game/script.rpy", line 82, in script call
+    call get_studies
+  File "game/patterns.rpy", line 18, in script call
+    call mini_games_medicine
+  File "game/mini games.rpy", line 29, in script call
+    call mini_game_medicine_1
+  File "game/script.rpy", line 82, in script call
+    call get_studies
+  File "game/patterns.rpy", line 18, in script call
+    call mini_games_medicine
+  File "game/mini games.rpy", line 29, in script call
+    call mini_game_medicine_1
+ScriptError: could not find label 'mini_game_medicine_1'.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 76, in script call
-    call get_finance
-  File "game/patterns.rpy", line 49, in script call
-    call bar_work
+  File "game/script.rpy", line 82, in script call
+    call get_studies
+  File "game/patterns.rpy", line 18, in script call
+    call mini_games_medicine
+  File "game/mini games.rpy", line 29, in script call
+    call mini_game_medicine_1
   File "D:\renpy-8.0.3-sdk\renpy\ast.py", line 1705, in execute
     rv = renpy.game.context().call(label, return_site=self.next.name)
-  File "game/script.rpy", line 76, in script call
-    call get_finance
-  File "game/patterns.rpy", line 49, in script call
-    call bar_work
+  File "game/script.rpy", line 82, in script call
+    call get_studies
+  File "game/patterns.rpy", line 18, in script call
+    call mini_games_medicine
+  File "game/mini games.rpy", line 29, in script call
+    call mini_game_medicine_1
   File "D:\renpy-8.0.3-sdk\renpy\script.py", line 927, in lookup
     raise ScriptError("could not find label '%s'." % str(original))
-ScriptError: could not find label 'bar_work'.
+ScriptError: could not find label 'mini_game_medicine_1'.
 
-Windows-10-10.0.19044 AMD64
+Windows-10-10.0.19045 AMD64
 Ren'Py 8.0.3.22090809
 Student Simulator 1.0
-Thu May 18 23:19:43 2023
+Thu May 25 17:42:32 2023

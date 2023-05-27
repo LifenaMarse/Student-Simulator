@@ -59,6 +59,11 @@ define calendar_counter = 1
 # счетчик для учебных вопросов
 define mini_games_counter = 0
 
+# какой факультет
+define faculty_IT = False
+define faculty_medicine = False
+define faculty_humanitarian = False
+
 # выходной или будний 
 define workday = True
 
