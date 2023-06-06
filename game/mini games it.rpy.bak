@@ -16,7 +16,7 @@ label mini_game_IT_1:
         "Нет такого понятия, есть понятие \"файловая система\".":
             $ correct_answer = False
 
-    call check_answer from _call_check_answer_10
+    call check_answer
         
     p '''
     Операционная система — это специальный набор программ, благодаря которому все системы компьютера взаимодействуют как между собой, так и с пользователем.
@@ -49,7 +49,7 @@ label mini_game_IT_2:
         "Это элемент компьютера, с помощью которого обрабатывается информация, находящаяся как в собственной памяти, так и в памяти других устройств.":
             $ correct_answer = True
 
-    call check_answer from _call_check_answer_11
+    call check_answer
         
     p '''
     Процессор – это устройство, отвечающее за обработку информации. Его называют по-разному: центральный процессор, 
@@ -81,7 +81,7 @@ label mini_game_IT_3:
         "Это мессенджер, как ICQ.":
             $ correct_answer = False
 
-    call check_answer from _call_check_answer_12
+    call check_answer
         
     p '''
     IP-адрес — уникальный числовой идентификатор устройства в компьютерной сети, работающей по протоколу IP.
@@ -113,7 +113,7 @@ label mini_game_IT_4:
         "IDE - это графический редактор, а не текстовый.":
             $ correct_answer = False
 
-    call check_answer from _call_check_answer_13
+    call check_answer
         
     p '''
     Интегрированная среда разработки или IDE — комплекс программных средств, используемый программистами для разработки программного обеспечения.
@@ -146,7 +146,7 @@ label mini_game_IT_5:
         "Pascal":
             $ correct_answer = False
 
-    call check_answer from _call_check_answer_14
+    call check_answer
         
     p '''
     Python — высокоуровневый язык программирования общего назначения с динамической строгой типизацией и автоматическим управлением памятью.
@@ -179,7 +179,7 @@ label mini_game_IT_6:
         "Объектно-ориентированное программирование":
             $ correct_answer = True
 
-    call check_answer from _call_check_answer_15
+    call check_answer
         
     p '''
     Объектно-ориентированное программирование — методология программирования, основанная на представлении программы в виде совокупности взаимодействующих объектов, 
@@ -213,7 +213,7 @@ label mini_game_IT_7:
         "o, O, Θ означают одно и то же, это просто разные варианты написания":
             $ correct_answer = False
 
-    call check_answer from _call_check_answer_16
+    call check_answer
         
     p '''
     Сложность алгоритмов обычно оценивают по времени выполнения или по используемой памяти. В обоих случаях сложность зависит от размеров входных данных: массив из 100 элементов будет обработан быстрее, чем аналогичный из 1000.
@@ -252,7 +252,7 @@ label mini_game_IT_8:
         "53":
             $ correct_answer = False
 
-    call check_answer from _call_check_answer_17
+    call check_answer
         
     p '''
     Система счисления — символический метод записи чисел, представление чисел с помощью письменных знаков.
@@ -286,7 +286,7 @@ label mini_game_IT_9:
         "А & B":
             $ correct_answer = False
 
-    call check_answer from _call_check_answer_18
+    call check_answer
     hide таблица истинности
         
     p '''
@@ -318,7 +318,7 @@ label mini_game_IT_10:
         "i нельзя возвести в квадрат":
             $ correct_answer = False
 
-    call check_answer from _call_check_answer_19
+    call check_answer
         
     p '''
     Комплексные числа — числа вида a + bi, где a, b — вещественные числа, i — мнимая единица, то есть число, для которого выполняется равенство: i^2 = -1.

@@ -365,6 +365,10 @@ define gui.history_text_xalign = 0.0
 ## Экран режима NVL показывает диалог NVL персонажей.
 
 ## Границы фона окна NVL.
+
+
+
+
 define gui.nvl_borders = Borders(0, 15, 0, 30)
 
 ## Максимальное число показываемых строк в режиме NVL. Когда количество строчек
@@ -373,7 +377,8 @@ define gui.nvl_list_length = 6
 
 ## Высота доступных строчек в режиме NVL. Установите на None, чтобы строчки
 ## динамически регулировали свою высоту.
-define gui.nvl_height = 173
+# define gui.nvl_height = 173
+define gui.nvl_height = None
 
 ## Интервал между строчками в режиме NVL, если gui.nvl_height имеет значение
 ## None, а также между строчками и меню режима NVL.
@@ -387,9 +392,9 @@ define gui.nvl_name_width = 225
 define gui.nvl_name_xalign = 1.0
 
 ## Местоположение, ширина и выравнивание диалогового текста.
-define gui.nvl_text_xpos = 675
+define gui.nvl_text_xpos = 500           #675
 define gui.nvl_text_ypos = 12
-define gui.nvl_text_width = 885
+define gui.nvl_text_width = 1000       #885
 define gui.nvl_text_xalign = 0.0
 
 ## Местоположение, ширина и выравнивание текста nvl_thought (текст от лица

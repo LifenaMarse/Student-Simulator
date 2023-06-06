@@ -1,75 +1,75 @@
 # маршрутизатор по IT вопросам
 label mini_games_IT:
     if mini_games_counter == 1:
-        call mini_game_IT_1
+        call mini_game_IT_1 from _call_mini_game_IT_1
     elif mini_games_counter == 2:
-        call mini_game_IT_2
+        call mini_game_IT_2 from _call_mini_game_IT_2
     elif mini_games_counter == 3:
-        call mini_game_IT_3
+        call mini_game_IT_3 from _call_mini_game_IT_3
     elif mini_games_counter == 4:
-        call mini_game_IT_4
+        call mini_game_IT_4 from _call_mini_game_IT_4
     elif mini_games_counter == 5:
-        call mini_game_IT_5
+        call mini_game_IT_5 from _call_mini_game_IT_5
     elif mini_games_counter == 6:
-        call mini_game_IT_6
+        call mini_game_IT_6 from _call_mini_game_IT_6
     elif mini_games_counter == 7:
-        call mini_game_IT_7
+        call mini_game_IT_7 from _call_mini_game_IT_7
     elif mini_games_counter == 8:
-        call mini_game_IT_8
+        call mini_game_IT_8 from _call_mini_game_IT_8
     elif mini_games_counter == 9:
-        call mini_game_IT_9
+        call mini_game_IT_9 from _call_mini_game_IT_9
     else:
-        call mini_game_IT_10
+        call mini_game_IT_10 from _call_mini_game_IT_10
     return
 
 
 # маршрутизатор по химбио вопросам
 label mini_games_medicine:
     if mini_games_counter == 1:
-        call mini_game_medicine_1
+        call mini_game_medicine_1 from _call_mini_game_medicine_1
     elif mini_games_counter == 2:
-        call mini_game_medicine_2
+        call mini_game_medicine_2 from _call_mini_game_medicine_2
     elif mini_games_counter == 3:
-        call mini_game_medicine_3
+        call mini_game_medicine_3 from _call_mini_game_medicine_3
     elif mini_games_counter == 4:
-        call mini_game_medicine_4
+        call mini_game_medicine_4 from _call_mini_game_medicine_4
     elif mini_games_counter == 5:
-        call mini_game_medicine_5
+        call mini_game_medicine_5 from _call_mini_game_medicine_5
     elif mini_games_counter == 6:
-        call mini_game_medicine_6
+        call mini_game_medicine_6 from _call_mini_game_medicine_6
     elif mini_games_counter == 7:
-        call mini_game_medicine_7
+        call mini_game_medicine_7 from _call_mini_game_medicine_7
     elif mini_games_counter == 8:
-        call mini_game_medicine_8
+        call mini_game_medicine_8 from _call_mini_game_medicine_8
     elif mini_games_counter == 9:
-        call mini_game_medicine_9
+        call mini_game_medicine_9 from _call_mini_game_medicine_9
     else:
-        call mini_game_medicine_10
+        call mini_game_medicine_10 from _call_mini_game_medicine_10
     return
 
 
 # маршрутизатор по гуманитарным вопросам
 label mini_games_humanitarian:
     if mini_games_counter == 1:
-        call mini_game_humanitarian_1
+        call mini_game_humanitarian_1 from _call_mini_game_humanitarian_1
     elif mini_games_counter == 2:
-        call mini_game_humanitarian_2
+        call mini_game_humanitarian_2 from _call_mini_game_humanitarian_2
     elif mini_games_counter == 3:
-        call mini_game_humanitarian_3
+        call mini_game_humanitarian_3 from _call_mini_game_humanitarian_3
     elif mini_games_counter == 4:
-        call mini_game_humanitarian_4
+        call mini_game_humanitarian_4 from _call_mini_game_humanitarian_4
     elif mini_games_counter == 5:
-        call mini_game_humanitarian_5
+        call mini_game_humanitarian_5 from _call_mini_game_humanitarian_5
     elif mini_games_counter == 6:
-        call mini_game_humanitarian_6
+        call mini_game_humanitarian_6 from _call_mini_game_humanitarian_6
     elif mini_games_counter == 7:
-        call mini_game_humanitarian_7
+        call mini_game_humanitarian_7 from _call_mini_game_humanitarian_7
     elif mini_games_counter == 8:
-        call mini_game_humanitarian_8
+        call mini_game_humanitarian_8 from _call_mini_game_humanitarian_8
     elif mini_games_counter == 9:
-        call mini_game_humanitarian_9
+        call mini_game_humanitarian_9 from _call_mini_game_humanitarian_9
     else:
-        call mini_game_humanitarian_10
+        call mini_game_humanitarian_10 from _call_mini_game_humanitarian_10
     return
 
 

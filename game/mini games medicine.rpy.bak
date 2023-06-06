@@ -16,7 +16,7 @@ label mini_game_medicine_1:
         "1 миллион":
             $ correct_answer = False
 
-    call check_answer from _call_check_answer_20
+    call check_answer
         
     p '''
     Латинский язык в биологии можно рассматривать как самостоятельный научный язык, произошедший от латинского языка эпохи Возрождения, но обогащённый множеством слов, заимствованных из древнегреческого и других языков.
@@ -50,7 +50,7 @@ label mini_game_medicine_2:
         "Вычесть атомный номер из атомной массы ":
             $ correct_answer = True
 
-    call check_answer from _call_check_answer_21
+    call check_answer
         
     p '''
     Мы знаем, что масса атома определяется массой ядра. Ядро состоит из протонов и нейтронов, относительные массы которых равны 1. Масса ядра равна сумме масс протонов и нейтронов.
@@ -83,7 +83,7 @@ label mini_game_medicine_3:
         "Зарядом ядра":
             $ correct_answer = False
 
-    call check_answer from _call_check_answer_22
+    call check_answer
         
     show изотопы at truecenter
     p '''
@@ -117,7 +117,7 @@ label mini_game_medicine_4:
         "Металлическая":
             $ correct_answer = False
 
-    call check_answer from _call_check_answer_23
+    call check_answer
         
     p '''
     Химическая связь — взаимодействие атомов, обусловливающее устойчивость молекулы или кристалла как целого. Химическая связь определяется взаимодействием между заряженными частицами.
@@ -151,7 +151,7 @@ label mini_game_medicine_5:
         "Непосредственно участвует в сборке молекул полипептидов":
             $ correct_answer = False
 
-    call check_answer from _call_check_answer_24
+    call check_answer
         
     p '''
     Дезоксирибонуклеиновая кислота — макромолекула, обеспечивающая хранение, передачу из поколения в поколение и реализацию генетической программы развития и функционирования живых организмов.
@@ -183,7 +183,7 @@ label mini_game_medicine_6:
         "II или III":
             $ correct_answer = True
 
-    call check_answer from _call_check_answer_25
+    call check_answer
 
     show цой at truecenter
     p '''
@@ -217,7 +217,7 @@ label mini_game_medicine_7:
         "Сердце":
             $ correct_answer = False
 
-    call check_answer from _call_check_answer_26
+    call check_answer
         
     p '''
     Гистогенез — совокупность процессов, приводящих к образованию и восстановлению тканей в ходе индивидуального развития. В образовании определенного вида тканей участвует тот или иной зародышевый листок. 
@@ -251,7 +251,7 @@ label mini_game_medicine_8:
         "Сердца, артерий, вен, лимфатических капилляров, лимфатических сосудов и протоков":
             $ correct_answer = False
 
-    call check_answer from _call_check_answer_27
+    call check_answer
         
     p '''
     Сердечно-cосудистая система — система органов, обеспечивающих циркуляцию крови в организме человека и животных.
@@ -285,7 +285,7 @@ label mini_game_medicine_9:
         "Защитная функция":
             $ correct_answer = False
 
-    call check_answer from _call_check_answer_28
+    call check_answer
         
     p '''
     Скелет человека — совокупность костей человеческого организма, пассивная часть опорно-двигательного аппарата. Служит опорой мягким тканям, точкой приложения мышц, вместилищем и защитой внутренних органов. Костная ткань скелета развивается из мезенхимы.
@@ -319,7 +319,7 @@ label mini_game_medicine_10:
         "Мортон":
             $ correct_answer = True
 
-    call check_answer from _call_check_answer_29
+    call check_answer
         
     p '''
     Анестезиология — раздел клинической медицины, занимающийся изучением методов защиты организма от операционной травмы и её последствий, а также от патологических нарушений, 

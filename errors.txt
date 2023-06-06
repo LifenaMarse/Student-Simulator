@@ -2,59 +2,21 @@
 errors listed below, and try again.
 
 
-File "game/mini games medicine.rpy", line 53: expected statement.
-(Perhaps you left out a ' at the end of the first line.)
-    p '''
-    
-        '''
+File "game/script.rpy", line 178: menu statement expects a non-empty block.
+    menu:
+        ^
 
-File "game/mini games medicine.rpy", line 82: expected statement.
-(Perhaps you left out a ' at the end of the first line.)
-    p '''
-    
-        '''
+File "game/script.rpy", line 180: expected statement.
+    "Пойти работать в цветочный магазин":
+                                        ^
 
-File "game/mini games medicine.rpy", line 111: expected statement.
-(Perhaps you left out a ' at the end of the first line.)
-    p '''
-    
-        '''
+File "game/script.rpy", line 185: expected statement.
+    "Пойти работать в бар":
+                          ^
 
-File "game/mini games medicine.rpy", line 140: expected statement.
-(Perhaps you left out a ' at the end of the first line.)
-    p '''
-    
-        '''
-
-File "game/mini games medicine.rpy", line 169: expected statement.
-(Perhaps you left out a ' at the end of the first line.)
-    p '''
-    
-        '''
-
-File "game/mini games medicine.rpy", line 198: expected statement.
-(Perhaps you left out a ' at the end of the first line.)
-    p '''
-    
-        '''
-
-File "game/mini games medicine.rpy", line 227: expected statement.
-(Perhaps you left out a ' at the end of the first line.)
-    p '''
-    
-        '''
-
-File "game/mini games medicine.rpy", line 256: expected statement.
-(Perhaps you left out a ' at the end of the first line.)
-    p '''
-    
-        '''
-
-File "game/mini games medicine.rpy", line 285: expected statement.
-(Perhaps you left out a ' at the end of the first line.)
-    p '''
-    
-        '''
+File "game/script.rpy", line 190: expected statement.
+    "Пойти работать строителем":
+                               ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Thu May 25 18:40:01 2023
+Tue Jun  6 19:45:10 2023
