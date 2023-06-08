@@ -9,8 +9,10 @@ label get_studies:
             else:
                 $ studies = change_parameter(studies + 1)
                 "Непонятно, что ты делал больше: занимался или отвлекался на посторонние вещи."
+            $ mental_health = change_parameter(mental_health - 1)
+            $ physical_health = change_parameter(physical_health - 1) 
 
-        "Пойти в универ" if workday:
+        "Пойти в универ" if workday and month != 'Январь':
             if calendar[calendar_counter][4]:
                 if faculty_IT:
                     call mini_games_IT from _call_mini_games_IT
@@ -24,7 +26,7 @@ label get_studies:
             else:
                 $ studies = change_parameter(studies + 10)
                 $ mental_health = change_parameter(mental_health - 5)
-                $ physical_health = change_parameter(physical_health - 3)          
+                $ physical_health = change_parameter(physical_health - 3)        
                 "Сегодня ты сходил на пары, молодец!"      
 
         "Сходить к репетитору":
@@ -71,7 +73,7 @@ label get_finance:
                 $ mental_health = change_parameter(mental_health - 10)
                 "Работать в непогоду под открытым небом - такое себе."
 
-    if workday:
+    if workday and month != 'Январь':
         $ studies = change_parameter(studies - 5)
 
     return
@@ -113,7 +115,8 @@ label get_mental_health:
             else:
                 $ mental_health = change_parameter(mental_health + 5)
                 "Откис, но дела сами собой не сделаются."
-    if workday:
+            $ physical_health = change_parameter(physical_health - 2)
+    if workday and month != 'Январь':
         $ studies = change_parameter(studies - 5)
     return
 
@@ -131,7 +134,7 @@ label get_physical_health:
                 $ finance = change_parameter(finance - 15)
                 "Чувствуешь себя like Boss of the gym!"
 
-        "Пойти на спортплощадку" if month != 'Декабрь' or month != 'Январь':
+        "Пойти на спортплощадку" if month != 'Декабрь' and month != 'Январь':
             if good_weather == False:
                 $ physical_health = change_parameter(physical_health + 5)
                 $ mental_health = change_parameter(mental_health - 3)
@@ -163,7 +166,7 @@ label get_physical_health:
             #     $ physical_health = change_parameter(physical_health + 5)
             #     $ mental_health = change_parameter(mental_health + 1)
             #     "Ну ка, где мои гантельки?"
-    if workday:
+    if workday and month != 'Январь':
         $ studies = change_parameter(studies - 5)
 
     return

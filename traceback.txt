@@ -1,42 +1,85 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "renpy/common/00start.rpy", line 215, in script call
-    call _load_reload_game from _call__load_reload_game_1
-  File "renpy/common/00keymap.rpy", line 517, in script
-    python hide:
-  File "renpy/common/00keymap.rpy", line 517, in <module>
-    python hide:
-  File "renpy/common/00keymap.rpy", line 528, in _execute_python_hide
-    renpy.load(renpy.session["_reload_slot"])
-Exception: Couldn't find a place to stop rolling back. Perhaps the script changed in an incompatible way?
+  File "game/script.rpy", line 330, in script call
+    call exam
+  File "game/session.rpy", line 9, in script call
+    call exam_questions
+  File "game/session.rpy", line 34, in script
+    menu:
+  File "game/screens.rpy", line 208, in execute
+    screen choice(items):
+  File "game/screens.rpy", line 208, in execute
+    screen choice(items):
+  File "game/screens.rpy", line 211, in execute
+    vbox:
+  File "game/screens.rpy", line 212, in execute
+    for i in items:
+  File "game/screens.rpy", line 213, in execute
+    textbutton i.caption action i.action
+KeyError: 'player_choice_list[session_counter'
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "renpy/common/00start.rpy", line 215, in script call
-    call _load_reload_game from _call__load_reload_game_1
-  File "renpy/common/00keymap.rpy", line 517, in script
-    python hide:
-  File "D:\renpy-8.0.3-sdk\renpy\ast.py", line 1131, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "D:\renpy-8.0.3-sdk\renpy\python.py", line 1061, in py_exec_bytecode
-    exec(bytecode, globals, locals)
-  File "renpy/common/00keymap.rpy", line 517, in <module>
-    python hide:
-  File "renpy/common/00keymap.rpy", line 528, in _execute_python_hide
-    renpy.load(renpy.session["_reload_slot"])
-  File "D:\renpy-8.0.3-sdk\renpy\loadsave.py", line 769, in load
-    log.unfreeze(roots, label="_after_load")
-  File "D:\renpy-8.0.3-sdk\renpy\rollback.py", line 1078, in unfreeze
-    self.rollback(0, force=True, label=label, greedy=greedy, on_load=True)
-  File "D:\renpy-8.0.3-sdk\renpy\rollback.py", line 889, in rollback
-    self.load_failed()
-  File "D:\renpy-8.0.3-sdk\renpy\rollback.py", line 807, in load_failed
-    raise Exception("Couldn't find a place to stop rolling back. Perhaps the script changed in an incompatible way?")
-Exception: Couldn't find a place to stop rolling back. Perhaps the script changed in an incompatible way?
+  File "game/script.rpy", line 330, in script call
+    call exam
+  File "game/session.rpy", line 9, in script call
+    call exam_questions
+  File "game/session.rpy", line 34, in script
+    menu:
+  File "D:\renpy-8.0.3-sdk\renpy\ast.py", line 1903, in execute
+    choice = renpy.exports.menu(choices, self.set, args, kwargs, item_arguments)
+  File "D:\renpy-8.0.3-sdk\renpy\exports.py", line 1010, in menu
+    rv = renpy.store.menu(new_items)
+  File "D:\renpy-8.0.3-sdk\renpy\exports.py", line 1250, in display_menu
+    rv = renpy.ui.interact(mouse='menu', type=type, roll_forward=roll_forward)
+  File "D:\renpy-8.0.3-sdk\renpy\ui.py", line 299, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "D:\renpy-8.0.3-sdk\renpy\display\core.py", line 3377, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "D:\renpy-8.0.3-sdk\renpy\display\core.py", line 3810, in interact_core
+    root_widget.visit_all(lambda i : i.per_interact())
+  File "D:\renpy-8.0.3-sdk\renpy\display\core.py", line 582, in visit_all
+    d.visit_all(callback, seen)
+  File "D:\renpy-8.0.3-sdk\renpy\display\core.py", line 582, in visit_all
+    d.visit_all(callback, seen)
+  File "D:\renpy-8.0.3-sdk\renpy\display\core.py", line 582, in visit_all
+    d.visit_all(callback, seen)
+  File "D:\renpy-8.0.3-sdk\renpy\display\screen.py", line 451, in visit_all
+    callback(self)
+  File "D:\renpy-8.0.3-sdk\renpy\display\core.py", line 3810, in <lambda>
+    root_widget.visit_all(lambda i : i.per_interact())
+  File "D:\renpy-8.0.3-sdk\renpy\display\screen.py", line 462, in per_interact
+    self.update()
+  File "D:\renpy-8.0.3-sdk\renpy\display\screen.py", line 653, in update
+    self.screen.function(**self.scope)
+  File "game/screens.rpy", line 208, in execute
+    screen choice(items):
+  File "game/screens.rpy", line 208, in execute
+    screen choice(items):
+  File "game/screens.rpy", line 211, in execute
+    vbox:
+  File "game/screens.rpy", line 212, in execute
+    for i in items:
+  File "game/screens.rpy", line 213, in execute
+    textbutton i.caption action i.action
+  File "D:\renpy-8.0.3-sdk\renpy\ui.py", line 992, in _textbutton
+    text = renpy.text.text.Text(label, style=text_style, substitute=substitute, scope=scope, **text_kwargs)
+  File "D:\renpy-8.0.3-sdk\renpy\text\text.py", line 1594, in __init__
+    self.set_text(text, scope, substitute)
+  File "D:\renpy-8.0.3-sdk\renpy\text\text.py", line 1712, in set_text
+    i, did_sub = renpy.substitutions.substitute(i, scope, substitute)
+  File "D:\renpy-8.0.3-sdk\renpy\substitutions.py", line 278, in substitute
+    s = formatter.vformat(s, (), kwargs) # type: ignore
+  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python3.9/string.py", line 165, in vformat
+  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python3.9/string.py", line 205, in _vformat
+  File "D:\renpy-8.0.3-sdk\renpy\substitutions.py", line 168, in get_field
+    obj, arg_used = super(Formatter, self).get_field(field_name, args, kwargs)
+  File "/home/tom/ab/renpy-build/tmp/install.linux-x86_64/lib/python3.9/string.py", line 278, in get_field
+KeyError: 'player_choice_list[session_counter'
 
 Windows-10-10.0.19045 AMD64
 Ren'Py 8.0.3.22090809
 Student Simulator 1.0
-Tue Jun  6 17:46:34 2023
+Thu Jun  8 17:07:04 2023

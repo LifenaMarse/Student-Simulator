@@ -2,21 +2,13 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 178: menu statement expects a non-empty block.
-    menu:
-        ^
+File "game/session.rpy", line 13: expected statement.
+    player_choice_dict
+                      ^
 
-File "game/script.rpy", line 180: expected statement.
-    "Пойти работать в цветочный магазин":
-                                        ^
-
-File "game/script.rpy", line 185: expected statement.
-    "Пойти работать в бар":
-                          ^
-
-File "game/script.rpy", line 190: expected statement.
-    "Пойти работать строителем":
-                               ^
+File "game/session.rpy", line 14: expected statement.
+    player_choice_list
+                      ^
 
 Ren'Py Version: Ren'Py 8.0.3.22090809
-Tue Jun  6 19:45:10 2023
+Thu Jun  8 17:16:33 2023

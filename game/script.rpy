@@ -62,12 +62,18 @@ label start:
         "Твой факультет?"         
         "Факультет информационных технологий":
             $ faculty_IT = True
+            $ player_choice_dict = questions_IT
+            $ player_choice_list = questions_IT_list
             "Ну а как иначе? Шаришь за hello world, да и считать ты всегда умел, определенно тебе сюда."
         "Факультет медицинских наук":
             $ faculty_medicine = True
+            $ player_choice_dict = questions_medicine
+            $ player_choice_list = questions_medicine_list
             "Как говорится, быть врачом – это призвание!"
         "Факультет гуманитарных наук":
             $ faculty_humanitarian = True
+            $ player_choice_dict = questions_humanitarian
+            $ player_choice_list = questions_humanitarian_list
             "Ну а как иначе? Язык хорошо подвешен, любишь читать, знаешь когда крестили Русь, определенно тебе сюда."
     
     "Глобально, чего-то важного или интересного в институте сегодня не было, ты познакомился со своей группой, вас ввели в курс дела по учебе и отпустили на все четыре стороны. Что же, завтра твой первый учебный день, не терпится начать новую жизнь, да?"
@@ -161,7 +167,7 @@ label start:
     "Это было продуктивно. Что подарит новый день?"
 
 
-    # дегь четыре
+    # день четыре
     $ week_day = calendar[calendar_counter][0]
     $ day = calendar[calendar_counter][1]
     $ month = calendar[calendar_counter][2]
@@ -245,7 +251,6 @@ label main_game:
             $ mini_games_counter += 1
 
 
-
         menu:       
             "Планы на сегодня?"         
             "Пойти учиться":
@@ -263,28 +268,21 @@ label main_game:
 
         if studies == 0 or finance == 0 or mental_health == 0 or physical_health == 0:
             jump bad_end
-            # call bad_end
 
         $ calendar_counter += 1
         "Что подарит новый день?"
+
+
+
+
+    jump session
         
 
 
 
-    if max(studies, finance, mental_health, physical_health) >= 80:
-        $ max_parameter = max(studies, finance, mental_health, physical_health)
-        jump good_end
 
     # studies >= 80 or finance >= 80 or mental_health >= 80 or physical_health >= 80:
         
-
-
-    """
-    sas! {w} SoS
-    """
-    "sbls"
-
-
 
     # scene gorizont
     # with fade
@@ -297,6 +295,106 @@ label main_game:
     # $ date += 1
 
     return
+
+
+
+label session:
+
+    scene mesi
+    with fade # плавный переход
+    show screen info_panel
+    
+    while calendar_counter <= 135:
+        $ week_day = calendar[calendar_counter][0]
+        $ day = calendar[calendar_counter][1]
+        $ month = calendar[calendar_counter][2]
+        $ day_type = calendar[calendar_counter][3]
+
+        if renpy.random.randint(1, 10) <= 6:
+            $ good_weather = True
+            $ weather = "хорошая"
+        else:
+            $ good_weather = False
+            $ weather = "плохая"
+
+        if day_type == 'каникулы':
+            "Прямо сейчас каникулы, так что отдыхай. Но не забывай, совсем скоро сессия!"
+        else:
+            "Сессия! Ух, не завидуя я тебе, конечно."
+
+
+        if calendar[calendar_counter][4]:
+            "День экзамена, ну с Богом!"
+            call exam
+        else:
+            "Есть еще время подготовиться."
+            if renpy.random.randint(1, 10) <= 5:
+                $ random_event = True
+            else:
+                $ random_event = False
+
+
+            menu:       
+                "Планы на сегодня?"         
+                "Пойти учиться":
+                    call get_studies
+
+                "Пойти работать":
+                    call get_finance
+
+                "Решать беды с башкой":
+                    call get_mental_health
+
+                "Заняться спортом":
+                    call get_physical_health
+
+        if studies == 0 or finance == 0 or mental_health == 0 or physical_health == 0:
+            jump bad_end
+
+        $ calendar_counter += 1
+        "Что подарит новый день?"
+
+    jump exit
+
+    return
+
+
+label exit:
+    scene mesi
+    with fade
+    show screen info_panel
+
+    $ week_day = calendar[calendar_counter][0]
+    $ day = calendar[calendar_counter][1]
+    $ month = calendar[calendar_counter][2]
+    $ day_type = calendar[calendar_counter][3]
+    
+    '''
+    Сегодня день результотов экзамена
+    '''
+
+    if mark >= 80:
+        "Твой балл равен {w}[mark]/100.{w} Это отличный результат, можешь собой гордиться!"
+    elif mark >= 60:
+        "Твой балл равен {w}[mark]/100.{w} Ты достаточно хорошо справился с задачей, есть куда расти, но и порадоваться сейчас, тоже можно."
+    elif mark >= 40:
+        "Твой балл равен {w}[mark]/100.{w} По правде говоря, это средний показател, тебе однозначно есть над чем работать в будущем!"
+    else:
+        "Твой балл равен {w}[mark]/100.{w} Даа... Ну если тебе этого хватит чтобы не вылететь с университета, то уже хорошо." 
+
+    $ studies *= 0.5
+    $ mark *= 0.5
+    $ studies = int(change_parameter(studies + mark))
+
+    "Что ж, вот твои результаты за эти пол года, ну как, доволен?"
+
+    if max(studies, finance, mental_health, physical_health) >= 80:
+        $ max_parameter = max(studies, finance, mental_health, physical_health)
+        jump good_end
+
+
+    return 
+
 
 
 
@@ -333,12 +431,12 @@ label bad_end:
 # хорошие концовки
 label good_end:
     if studies == max_parameter:
-        ""
+        "1"
     elif finance == max_parameter:
-        ""
+        "2"
     elif mental_health == max_parameter:
-        "" 
+        "3" 
     else:
-        ""
+        "4"
 
     return
